@@ -12,6 +12,24 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
-
+const testSting = (a) => {
+  let contador = 0;
+  let media = 0;
+  for (let index = 0; index < a.length; index += 1) {
+    if (typeof a[index] !== 'number') {
+      return undefined;
+    }
+    contador += a[index];
+  }
+  media = Math.round(contador / a.length);
+  return media;
+};
+const average = (a) => {
+  if (a.length === 0) {
+    return undefined;
+  }
+  const teste1 = testSting(a);
+  return teste1;
+};
+console.log(average([10, 2]));
 module.exports = average;
